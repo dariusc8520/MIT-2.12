@@ -1,0 +1,16 @@
+Question 1: Is this approximation accurate? What is a way to improve this approximation?
+This approximation is accurate to the size of the timestep. The smaller the time step, the more accurate the approximation.
+This is just euler integration and the approximation can be improved if you implement trapezoidal integration.
+
+Question2: Given the curvature k and the maximum wheelspeed dphi_max, what is the maximum robotVel that you can drive your robot at?
+Max robot velocity is determined by the outer turning wheel being driven at maximum wheel velocity. 
+dPhi_Max = V*(1+bk)
+V being robot velocity, k being curvature, and b being the the length from the midpoint to one wheel
+
+Task5:
+You would not expect ideal path trajectory in the real world due to real world issues like slip or friction. 
+The slip is adding 10% of the velocity to the robot velocity which causes overshoot
+Subtracting the slip would cause undershoot. 
+Other affects that influence tracking are motor discrepancies, voltage fluctuations, friction, and surface friction(slip)
+
+
